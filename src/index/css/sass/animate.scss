@@ -1,0 +1,201 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-.4rem);
+    }
+    100% {
+        transform: translateY(0.4rem);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3rem, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUpBig {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 10rem, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUpOut {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3rem, 0);
+    }
+    30%, 90%{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -3rem, 0);
+    }
+}
+
+@keyframes fadeInUpScale {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3rem, 0);
+    }
+    30%, 90% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: scale(1.5) translateY(-3rem);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDownIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem) scale(0.3);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: none;
+    }
+    15% {
+        transform: translate3d(-25%, 0, 0);
+    }
+    30% {
+        transform: translate3d(20%, 0, 0);
+    }
+    45% {
+        transform: translate3d(-15%, 0, 0);
+    }
+    60% {
+        transform: translate3d(10%, 0, 0);
+    }
+    75% {
+        transform: translate3d(-5%, 0, 0);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes lightning {
+    0% {
+        transform: none;
+        opacity: 0;
+    }
+    15% {
+        transform: translate3d(0, -100%, 0) scale(.3);
+        opacity: 1;
+    }
+    30% {
+        transform: translate3d(0, -50%, 0) scale(.5);
+        opacity: 1;
+    }
+    38% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+    45% {
+        transform: translate3d(0, -100%, 0) scale(.3);
+        opacity: 0;
+    }
+    60% {
+        transform: translate3d(0, -70%, 0) scale(.4);
+        opacity: 1;
+    }
+    68% {
+        transform: translate3d(0, -30%, 0) scale(.8);
+        opacity: 1;
+    }
+    75% {
+        transform: translate3d(0, -10%, 0) scale(.9);
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -3rem, 0);
+    }
+}
+
+.active .layer.spin {
+    animation: spin 3s linear infinite both;
+}
+.active .layer.fadeOutUp {
+    animation: fadeOutUp .3s ease both;
+}

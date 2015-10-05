@@ -1,0 +1,335 @@
+body {
+    background: url(/assets/imgs/shading.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+#main {
+    display: none;
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.prev .layer {
+    display: none;
+}
+
+@mixin layerCenter($width: 320, $height: 200, $top: 500, $left: 320) {
+    $width: $width * 1rem / 20;
+    $height: $height * 1rem / 20;
+    top: percentage($top/1136);
+    left: percentage($left/640);
+    width: $width;
+    height: $height;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+}
+
+@mixin layerEdge($width: 320, $height: 200, $top: 500, $left: 320) {
+    $width: $width * 1rem / 20;
+    $height: $height * 1rem / 20;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+
+/* page 1 */
+
+.layer-logo {
+    background-image: url(/assets/imgs/logo.png);
+    @include layerCenter(114, 163, 158);
+}
+
+.layer-shuzhi {
+    background-image: url(/assets/imgs/shuzhi.png);
+    @include layerCenter(365, 231, 115.5, 182.5);
+}
+
+.layer-reel {
+    background-image: url(/assets/imgs/reel.png);
+    @include layerCenter(640, 406, 741);
+}
+
+.layer-motianji {
+    background-image: url(/assets/imgs/motianji.png);
+    @include layerCenter(270, 114, 768, 375);
+}
+
+.layer-rensheng {
+    background-image: url(/assets/imgs/rensheng.png);
+    @include layerCenter(571, 242, 434);
+}
+
+.layer-arrow {
+    background-image: url(/assets/imgs/arrow.png);
+    @include layerCenter(75, 39, 1026.48, 326.5);
+}
+
+.active {
+    .layer-shuzhi {
+        animation: fadeIn .3s 0s linear both;
+    }
+    .layer-reel {
+        animation: fadeIn .3s 0s linear both;
+    }
+    .layer-logo {
+        animation: fadeIn 1s .3s ease-out both;
+    }
+    .layer-rensheng {
+        animation: scaleIn .55s .6s ease-in-out both;
+    }
+    .layer-motianji {
+        animation: fadeIn 1.8s 1.1s linear both;
+    }
+    .layer-arrow {
+        animation: arrow .7s .3s ease-in alternate infinite both;
+    }
+}
+
+
+/* page 2 */
+
+.layer-beiwei {
+    background-image: url(/assets/imgs/beiwei.png);
+    @include layerCenter(540, 211, 406.5, 312);
+}
+
+.layer-4throw {
+    background-image: url(/assets/imgs/4throw.png);
+    @include layerCenter(292, 244, 710, 362);
+}
+
+.layer-3rdrow {
+    background-image: url(/assets/imgs/3rdrow.png);
+    @include layerCenter(494, 258, 766, 318);
+}
+
+.layer-2ndrow {
+    background-image: url(/assets/imgs/2ndrow.png);
+    @include layerCenter(420, 268, 861, 316);
+}
+
+.layer-1strow {
+    background-image: url(/assets/imgs/1strow.png);
+    @include layerCenter(520, 266, 921, 319);
+}
+
+.active {
+    .layer-4throw {
+        animation: fadeInUpOut 3s 0s ease-out both;
+    }
+    .layer-3rdrow {
+        animation: fadeInUpOut 3s 0.5s ease-out both;
+    }
+    .layer-2ndrow {
+        animation: fadeInUpOut 3s 1s ease-out both;
+    }
+    .layer-1strow {
+        animation: fadeInUpScale 2.8s 1.5s ease both;
+    }
+    .layer-beiwei {
+        animation: scaleIn .8s 2.2s ease-in-out both;
+    }
+}
+
+
+/* page 3 */
+
+.layer-despair {
+    background-image: url(/assets/imgs/despair.png);
+    @include layerCenter(538, 249, 572.5, 337);
+}
+
+.layer-swordback {
+    background-image: url(/assets/imgs/swordback.png);
+    @include layerCenter(640, 1136, 1136/2, 320);
+}
+
+.layer-sword {
+    background-image: url(/assets/imgs/sword.png);
+    @include layerCenter(421, 703, 497.5, 409.5);
+}
+
+.layer-groud {
+    background-image: url(/assets/imgs/groud.png);
+    @include layerCenter(640, 305, 935.5, 320);
+}
+
+.layer-petal {
+    background-image: url(/assets/imgs/petal.png);
+    @include layerCenter(85, 56, 669, 549.5);
+}
+
+.layer-flag {
+    background-image: url(/assets/imgs/flag.png);
+    @include layerCenter(165, 452, 226, 82.5);
+}
+
+.layer-light {
+    background-image: url(/assets/imgs/light.png);
+    @include layerCenter(497, 765, 477.5, 285.5);
+}
+
+.active {
+    .layer-flag {
+        animation: fadeIn 1s .3s ease-out both;
+    }
+    .layer-despair {
+        animation: scaleIn .55s 2s ease-in-out both;
+    }
+    .layer-sword {
+        animation: scaleDownIn .3s 1s ease-in-out both;
+    }
+    .layer-light {
+        animation: fadeInUp .7s 1s ease-in both;
+    }
+    .layer-groud {
+        animation: wobble .4s 1.3s ease both;
+    }
+    .layer-petal {
+        animation: fadeInRight 2.2s .8s ease-in-out both;
+    }
+}
+
+
+/* page 4 */
+
+.layer-lightning {
+    background-image: url(/assets/imgs/lightning.png);
+    @include layerCenter(640, 473, 236.5, 320);
+}
+
+.layer-rule {
+    background-image: url(/assets/imgs/rule.png);
+    @include layerCenter(560, 243, 320.5, 306);
+}
+
+.layer-flight {
+    background-image: url(/assets/imgs/flight.png);
+    @include layerCenter(640, 776, 748);
+}
+
+.active {
+    .layer-flight {
+        animation: fadeInUpBig .6s .1s ease-in-out both;
+    }
+    .layer-lightning {
+        animation: lightning .5s .3s ease both;
+    }
+    .layer-rule {
+        animation: scaleIn .5s .8s ease-in-out both;
+    }
+}
+
+
+/* page 4 */
+
+.layer-dream {
+    background-image: url(/assets/imgs/dream.png);
+    @include layerCenter(522, 249, 452.5, 298);
+}
+
+.layer-signblock {
+    background-image: url(/assets/imgs/signblock.png);
+    @include layerCenter(307, 248, 863, 334.5);
+}
+
+.layer-signcircle {
+    background-image: url(/assets/imgs/signcircle.png);
+    @include layerCenter(216, 215, 860.5, 317);
+}
+
+.layer-caption {
+    background-image: url(/assets/imgs/caption.png);
+    @include layerCenter(357, 453, 503.5, 262.5);
+}
+
+.layer-surprised {
+    background-image: url(/assets/imgs/surprised.png);
+    @include layerCenter(439, 31, 1003.5, 320);
+}
+
+.layer-arrow2 {
+    background-image: url(/assets/imgs/arrow.png);
+    @include layerCenter(75, 39, 1058.48, 320);
+}
+
+.active {
+    .layer-dream {
+        animation: scaleIn .5s .1s ease both;
+    }
+    .layer-signblock,
+    .layer-signcircle,
+    .layer-caption,
+    .layer-surprised {
+        animation: fadeInUp .6s 2.5s ease both;
+    }
+    .layer-arrow2 {
+        animation: arrow .7s .3s ease-in alternate infinite both;
+    }
+}
+
+
+/* page 4 */
+
+.layer-sharearrow {
+    background-image: url(/assets/imgs/sharearrow.png);
+    @include layerCenter(152, 73, 45.5, 447);
+}
+
+.layer-giftcaption {
+    background-image: url(/assets/imgs/giftcaption.png);
+    @include layerCenter(546, 102, 145, 318);
+}
+
+.layer-giftitle {
+    background-image: url(/assets/imgs/giftitle.png);
+    @include layerCenter(561, 90, 299, 320);
+}
+
+.gift-area {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 32rem;
+    height: 57rem;
+    margin-left: -16rem;
+}
+
+.layer-gift1 {
+    background-image: url(/assets/imgs/gift1.png);
+    @include layerCenter(323, 293, 0, 161.5);
+}
+
+.layer-gift2 {
+    background-image: url(/assets/imgs/gift2.png);
+    @include layerCenter(347, 293, 0, 435.5);
+}
+
+.layer-gift3 {
+    background-image: url(/assets/imgs/gift3.png);
+    @include layerCenter(314, 299, 797.5-511.5, 157);
+}
+
+.layer-gift4 {
+    background-image: url(/assets/imgs/gift4.png);
+    @include layerCenter(307, 296, 796-511.5, 429.5);
+}
+
+.layer-returnarrow {
+    background-image: url(/assets/imgs/returnarrow.png);
+    @include layerCenter(75, 56, 1067, 320.5);
+}
+
+.pop-module {
+    display: none;
+}
